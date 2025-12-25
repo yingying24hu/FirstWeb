@@ -1,0 +1,52 @@
+{
+  "restaurants": [
+    {
+      "category": "日式料理",
+      "items": ["Sushiro", "Genki", "鳥貴族", "和民"]
+    },
+    {
+      "category": "中式粉麵/米線",
+      "items": ["Tamjai", "南記粉麵", "雲川", "潮成園", "川味閣"]
+    },
+    {
+      "category": "快餐/連鎖",
+      "items": ["大家樂", "大快活", "KFC", "Subway", "McDonalds", "Sayzaria"]
+    },
+    {
+      "category": "西式/咖啡廳",
+      "items": ["BYOB", "Terrance in Seaside", "California Pizza Kitchen", "Starbucks", "牧羊少年", "Dough Bros", "Pizza Hut", "Pizza Express", "Pastaholic", "&You", "Matcha Tokyo", "PHI Coffee & Pancake", "德國餐廳"]
+    },
+    {
+      "category": "港式茶餐廳",
+      "items": ["百分百", "意樂", "Chicken Factory", "韓樂", "牛奶冰室", "米籽", "荷里活冰室", "荷蘭冰室", "敏華", "永年士多", "太興", "大哥雞飯", "金鳳大餐廳", "井茶冰室"]
+    },
+    {
+      "category": "中式酒樓/點心",
+      "items": ["堅信號", "上海婆婆", "稻城", "翡翠拉麵小籠包", "名點屋", "茶皇漁港", "稻香", "點滾鮮"]
+    },
+    {
+      "category": "日式拉麵",
+      "items": ["一幻拉麵", "一橋拉麵", "霸嗎拉麵", "大門拉麵", "彩 aya"]
+    },
+    {
+      "category": "台式/茶飲",
+      "items": ["九分飽", "茶木", "百芳池上便當"]
+    },
+    {
+      "category": "火鍋/燒肉",
+      "items": ["牛魔", "牛氣", "牛大人", "海底撈", "一鼎台式火鍋", "山見台式火鍋"]
+    },
+    {
+      "category": "泰越星馬",
+      "items": ["小曼谷泰國菜館", "泰國婆", "Bamboo Thai", "春嬌越南河", "沙爹王"]
+    },
+    {
+      "category": "餃子專門",
+      "items": ["八方雲集", "餃里", "豐信餃子", "甜記餃子", "餃掂"]
+    },
+    {
+      "category": "越式",
+      "items": ["越北", "大頭蝦", "馬泰"]
+    }
+  ]
+}

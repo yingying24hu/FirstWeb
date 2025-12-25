@@ -1,0 +1,11 @@
+hey here is the to do from deepseek to make a web
+
+1. use html to design page graphics, each .html file represents one page
+2. use css to make the page design more pretty
+3. upload all the html and css files in a folder and upload to netify or GitHub to get an url,
+   then people can access my website through this url
+
+
+How to add interactive functions to the web?
+1. simple navigation from one page to another: code in html files (buttons can be added in html)
+2. real logic: use javascript

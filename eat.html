@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>What to Eat</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>What to Eat</h1>
+    <h2>Food type</h2>
+    <p>Choose from a list of restaurants.</p>
+    <button onclick="chooseFood()">Choose Food</button>
+    <input type="text" id="result" readonly>
+    <script>
+        let restaurants = [];
+        window.onload = function() {
+            fetch('restaurants.json')
+                .then(response => response.json())
+                .then(data => {
+                    restaurants = data.restaurants.flatMap(cat => cat.items);
+                });
+        };
+        function chooseFood() {
+            if (restaurants.length > 0) {
+                const randomIndex = Math.floor(Math.random() * restaurants.length);
+                document.getElementById('result').value = restaurants[randomIndex];
+            }
+        }
+    </script>
+</body>
+</html>
