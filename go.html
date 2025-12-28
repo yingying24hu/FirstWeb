@@ -5,7 +5,55 @@
 </head>
 <body>
     <h1>Where to Go</h1>
-    <p>This page is under construction.</p>
-    <a href="index.html">Back to Home</a>
+    <h2>Places</h2>
+    <p>Choose from a list of places.</p>
+    <div>
+        <input type="text" id="currentPlace" readonly>
+        <button id="nextBtn">Next</button>
+        <button id="tickBtn">Tick</button>
+    </div>
+    <div>
+        <input type="text" id="place1" readonly>
+        <input type="text" id="place2" readonly>
+        <input type="text" id="place3" readonly>
+    </div>
+    <button id="drawBtn">Draw</button>
+    <input type="text" id="drawnPlace" readonly>
+    <script>
+        let hangoutSpots = [];
+        window.onload = function() {
+            fetch('hangout.json')
+                .then(response => response.json())
+                .then(data => {
+                    hangoutSpots = data.hangout_spots;
+                });
+        };
+        document.getElementById('nextBtn').addEventListener('click', function() {
+            if (hangoutSpots.length > 0) {
+                const randomIndex = Math.floor(Math.random() * hangoutSpots.length);
+                document.getElementById('currentPlace').value = hangoutSpots[randomIndex];
+            }
+        });
+        document.getElementById('tickBtn').addEventListener('click', function() {
+            const current = document.getElementById('currentPlace').value;
+            if (current) {
+                const places = [document.getElementById('place1'), document.getElementById('place2'), document.getElementById('place3')];
+                for (let place of places) {
+                    if (!place.value) {
+                        place.value = current;
+                        document.getElementById('currentPlace').value = '';
+                        break;
+                    }
+                }
+            }
+        });
+        document.getElementById('drawBtn').addEventListener('click', function() {
+            const places = [document.getElementById('place1').value, document.getElementById('place2').value, document.getElementById('place3').value].filter(p => p);
+            if (places.length > 0) {
+                const randomIndex = Math.floor(Math.random() * places.length);
+                document.getElementById('drawnPlace').value = places[randomIndex];
+            }
+        });
+    </script>
 </body>
 </html>
