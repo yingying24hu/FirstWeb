@@ -2,23 +2,43 @@
 <html>
 <head>
     <title>Where to Go</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        div {
+            margin: 10px 0;
+        }
+        input[type="text"] {
+            margin: 5px;
+        }
+        button {
+            margin: 0 5px;
+        }
+        textarea {
+            width: 80%;
+            max-width: 500px;
+            height: 100px;
+            resize: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Where to Go</h1>
-    <h2>Places</h2>
-    <p>Choose from a list of places.</p>
+    <h1>出街好去處</h1>
+    <div>Filter: <button id="filterBtn">F</button></div>
     <div>
         <input type="text" id="currentPlace" readonly>
-        <button id="nextBtn">Next</button>
-        <button id="tickBtn">Tick</button>
+        <button id="nextBtn">R</button>
+        <button id="tickBtn">T</button>
     </div>
-    <div>
-        <input type="text" id="place1" readonly>
-        <input type="text" id="place2" readonly>
-        <input type="text" id="place3" readonly>
-    </div>
-    <button id="drawBtn">Draw</button>
-    <input type="text" id="drawnPlace" readonly>
+    <textarea id="description" readonly></textarea>
+    <div><input type="text" id="place1" readonly></div>
+    <div><input type="text" id="place2" readonly></div>
+    <div><input type="text" id="place3" readonly></div>
+    <div><button id="drawBtn">Random</button></div>
+    <div><input type="text" id="drawnPlace" readonly></div>
     <script>
         let hangoutSpots = [];
         window.onload = function() {
@@ -53,6 +73,10 @@
                 const randomIndex = Math.floor(Math.random() * places.length);
                 document.getElementById('drawnPlace').value = places[randomIndex];
             }
+        });
+        // Filter button - placeholder, no functionality yet
+        document.getElementById('filterBtn').addEventListener('click', function() {
+            // TODO: implement filter
         });
     </script>
 </body>
